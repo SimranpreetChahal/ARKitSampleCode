@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4JD-ox-4nk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6Hi-bT-ArG">
+            <objects>
+                <viewController id="4JD-ox-4nk" customClass="ViewController" customModule="ArkitPlaneDetect_PlaceObject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7gm-a0-dFr"/>
+                        <viewControllerLayoutGuide type="bottom" id="HFp-qI-srL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zjJ-6J-xp0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-Oc-QjN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y2-2f-to2" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="25" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7u-TZ-EWu" userLabel="Camers Tracking Status">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.54526559429999999" green="0.99429483330000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6gU-le-IxW"/>
+                                    <constraint firstItem="k7u-TZ-EWu" firstAttribute="leading" secondItem="0y2-2f-to2" secondAttribute="leading" constant="10" id="TS2-fZ-OEC"/>
+                                    <constraint firstItem="k7u-TZ-EWu" firstAttribute="top" secondItem="0y2-2f-to2" secondAttribute="top" id="dXL-75-kjP"/>
+                                    <constraint firstAttribute="trailing" secondItem="k7u-TZ-EWu" secondAttribute="trailing" constant="10" id="mIM-Pw-bWC"/>
+                                    <constraint firstAttribute="bottom" secondItem="k7u-TZ-EWu" secondAttribute="bottom" id="w0J-98-zFw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xws-z1-NzN" userLabel="FooterView">
+                                <rect key="frame" x="-2" y="614" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tl-Vg-Vg5">
+                                        <rect key="frame" x="152" y="5" width="70" height="40"/>
+                                        <color key="backgroundColor" red="0.59901434183120728" green="0.99957972764968872" blue="0.48840516805648804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="53h-W3-Bxh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="w0V-1b-x7W"/>
+                                        </constraints>
+                                        <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pauseButtonTapped:" destination="4JD-ox-4nk" eventType="touchUpInside" id="gIo-QW-b1P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KR-1p-9fm">
+                                        <rect key="frame" x="285" y="5" width="70" height="40"/>
+                                        <color key="backgroundColor" red="0.59901434183120728" green="0.99957972764968872" blue="0.48840516805648804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="4JD-ox-4nk" eventType="touchUpInside" id="9zO-09-Ued"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6Tl-Vg-Vg5" firstAttribute="centerX" secondItem="Xws-z1-NzN" secondAttribute="centerX" id="5VR-JJ-s0o"/>
+                                    <constraint firstItem="2KR-1p-9fm" firstAttribute="leading" secondItem="6Tl-Vg-Vg5" secondAttribute="trailing" constant="63" id="8wC-E3-Pdb"/>
+                                    <constraint firstItem="2KR-1p-9fm" firstAttribute="centerY" secondItem="Xws-z1-NzN" secondAttribute="centerY" id="Ax6-yR-lvB"/>
+                                    <constraint firstAttribute="trailing" secondItem="2KR-1p-9fm" secondAttribute="trailing" constant="20" id="LkS-Rj-mfE"/>
+                                    <constraint firstItem="2KR-1p-9fm" firstAttribute="height" secondItem="6Tl-Vg-Vg5" secondAttribute="height" id="cvf-7g-2nY"/>
+                                    <constraint firstItem="6Tl-Vg-Vg5" firstAttribute="centerY" secondItem="Xws-z1-NzN" secondAttribute="centerY" id="eS5-Uz-Wi2"/>
+                                    <constraint firstAttribute="height" constant="50" id="y9o-FJ-0iY"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once planes are detected, tap on any of the plane to select and then tap on the existing plane to place objects" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaS-6i-JjA" userLabel="InfoLabel">
+                                <rect key="frame" x="20" y="509" width="335" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NYo-My-B6t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.4582197958" blue="0.57517862939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="s4a-Oc-QjN" secondAttribute="trailing" id="3IP-E1-pji"/>
+                            <constraint firstItem="HFp-qI-srL" firstAttribute="top" secondItem="Xws-z1-NzN" secondAttribute="bottom" constant="3" id="BDm-Vy-Rt3"/>
+                            <constraint firstAttribute="trailing" secondItem="xaS-6i-JjA" secondAttribute="trailing" constant="20" id="EDK-y7-Otk"/>
+                            <constraint firstItem="0y2-2f-to2" firstAttribute="leading" secondItem="zjJ-6J-xp0" secondAttribute="leading" id="Kmx-21-AAb"/>
+                            <constraint firstAttribute="bottom" secondItem="s4a-Oc-QjN" secondAttribute="bottom" id="RBJ-JH-Nxt"/>
+                            <constraint firstItem="s4a-Oc-QjN" firstAttribute="top" secondItem="zjJ-6J-xp0" secondAttribute="top" id="aBu-i6-d36"/>
+                            <constraint firstAttribute="trailing" secondItem="0y2-2f-to2" secondAttribute="trailing" id="bJN-an-VGj"/>
+                            <constraint firstItem="xaS-6i-JjA" firstAttribute="leading" secondItem="zjJ-6J-xp0" secondAttribute="leading" constant="20" id="fed-kj-7sS"/>
+                            <constraint firstItem="Xws-z1-NzN" firstAttribute="width" secondItem="zjJ-6J-xp0" secondAttribute="width" id="iEq-M9-Jpg"/>
+                            <constraint firstItem="Xws-z1-NzN" firstAttribute="leading" secondItem="zjJ-6J-xp0" secondAttribute="leading" constant="-2" id="jKF-7u-lkI"/>
+                            <constraint firstItem="0y2-2f-to2" firstAttribute="top" secondItem="zjJ-6J-xp0" secondAttribute="top" constant="25" id="td7-7d-WYI"/>
+                            <constraint firstItem="s4a-Oc-QjN" firstAttribute="leading" secondItem="zjJ-6J-xp0" secondAttribute="leading" id="tqi-ro-bdC"/>
+                            <constraint firstItem="xaS-6i-JjA" firstAttribute="bottom" secondItem="Xws-z1-NzN" secondAttribute="top" constant="-5" id="zIV-N3-lmi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraStatusLabel" destination="k7u-TZ-EWu" id="Zif-Vq-V9I"/>
+                        <outlet property="infoLabel" destination="xaS-6i-JjA" id="EI0-U4-6Qp"/>
+                        <outlet property="pauseButton" destination="6Tl-Vg-Vg5" id="yg8-JG-oZI"/>
+                        <outlet property="resetButton" destination="2KR-1p-9fm" id="67s-ML-Tg8"/>
+                        <outlet property="sceneView" destination="s4a-Oc-QjN" id="JdU-3q-lIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fr-UZ-uyx" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>
